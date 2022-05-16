@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Login Msn</title>
+</head>
+<body>
+    <header>
+        <br>
+        
+        <h1>MSN</h1>
+    </header>
+    <div id="container">
+        <div id="colunaEsquerda">
+            <div id="rotas">
+                <h3>Configurações</h3>
+                <p id="campo1">E-mail: </p>
+                <input type="text" name="origem" id="origem"  placeholder="Insira seu E-mail" value="gildo.junior@cliqx.com.br">
+                <p id="campo2">Senha: </p>
+                <div id="areaMod">
+                    <input type="password" name="destino" id="destino" placeholder="Insira a sua senha" value="123456">
+                </div>
+                <input type="button" value="Entrar" id="entrar"onclick="entrar()">
+            </div>
+            <textarea name="mensagem" id="mensagem" cols="60" rows="15" placeholder="Digite aqui a sua mensagem"></textarea>
+            <button type="submit" onclick="chat()" id="enviarMsg" disabled>Enviar</button>
+        </div>
+        <div id="colunaDireita">
+            <nav id="historico">
+                <h3 id="tituloHistorico">Histórico</h3>
+                <ul id="chate">
+                    
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+    <script src="./assets/javascript/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(231, 195, 148, 0.774);
+}
+#container{
+    display: flex;
+    justify-content: space-around;
+}
+/* header */
+header{
+
+    height: 9vh;
+    text-align: center;
+}
+button{
+    position: relative;
+    padding: 30px;
+    top: -50px;
+}
+
+/* Coluna esquerda */
+#colunaEsquerda{
+    width: 45%;
+    height: 550px;
+}
+#colunaEsquerda #rotas{
+    padding: 40px;
+    position: relative;
+    border: 2px solid red;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    margin-left: 24.3%;
+    background-color: rgba(228, 187, 135, 0.774);
+}
+#colunaEsquerda h3{
+    margin-top: -4vh;
+    padding: 10px;
+    margin-left: -2vw;
+}
+#colunaEsquerda #rotas input{
+    width: 18vw;
+    height: 5vh;
+    margin-left: -1vw;
+    margin-bottom: 2vh;
+    padding-left: 20px;
+}
+/* colula direita */
+#colunaDireita{
+    width: 45%;
+    height: 550px;
+}
+
+#colunaDireita #historico{
+    list-style: url('../img/fast-forward.png');
+    height: 80vh;
+}
+#colunaDireita #historico dt{
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+#colunaDireita #historico dd{
+    font-size: 18px;
+    margin-left: 2vw;
+    border-bottom: 2px solid gray;
+}
+
+
+#colunaDireita #historico{
+    background-color: rgba(179, 173, 173, 0.37);
+    border: 2px solid rgb(63, 63, 63);
+    width: 40vw;
+    min-height: 40vh;
+    padding: 40px;
+    margin-left: auto;
+    overflow: auto;
+}
+
+#colunaDireita #tituloHistorico{
+    margin-left: 0px;
+}
