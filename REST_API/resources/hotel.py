@@ -44,34 +44,29 @@ class Hotel(Resource):
     argumentos.add_argument('cidade')
 
     # achar o hotel procura na lista já criada, se o hotel existir, retorna o objeto, caso não exista, retorna none
-    def find_hotel(self,hotel_id):
-        for hotel in hoteis:
-            if hotel['hotel_id'] == hotel_id:
-                return hotel
-        return None
+
 
     def get(self,hotel_id):
         hotel = Hotel.find_hotel(self, hotel_id)
         if hotel:
             return hotel
+        return {"message": "hotel not found."}, 404
 
 
     def post(self,hotel_id):
 
+        if HotelModel.find_hotel(hotel_id):
+            return {"message": 'Hotel "{}"already exist.'.format(hotel_id)},400
 
         dados = Hotel.argumentos.parse_args()
-        hotel_objeto = HotelModel(hotel_id,**dados)
-        novo_hotel = hotel_objeto.json()
+        hotel = HotelModel(hotel_id,**dados)
+        
         '''
         antes da sintaxe descrita acima
         novo_hotel = {
             'hotel_id': hotel_id,**dados
         }'''
-        procure = Hotel.find_hotel(self,hotel_id)
-        if not procure:
-            hoteis.append(novo_hotel)
-            return novo_hotel, 200
-        return {"message": "Hotel already exist."}
+        
 
     def put(self,hotel_id):
         dados = Hotel.argumentos.parse_args()
